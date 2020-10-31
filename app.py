@@ -28,8 +28,9 @@ def ocr(filename):
     """
     This function will handle the core OCR processing of images.
     """
-    pytesseract.pytesseract.tesseract_cmd = r'./.apt/usr/share/tesseract-ocr/4.00/tessdata'
-    text = pytesseract.image_to_string(Image.open(filename))# We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
+    pytesseract.pytesseract.tesseract_cmd = r'/app/.apt/usr/bin/tesseract'
+    img=Image.open(filename)
+    text = pytesseract.image_to_string(img)# We'll use Pillow's Image class to open the image and pytesseract to detect the string in the image
 
     return text
 
