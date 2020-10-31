@@ -34,7 +34,7 @@ def ocr(filename):
 
     return text
 
-print(ocr('Car_Image_1.jpg'))
+#print(ocr('Car_Image_1.jpg'))
 
 
 @app.route('/')
